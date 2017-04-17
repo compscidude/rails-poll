@@ -10,13 +10,13 @@ The current repository is hosted on Heroku
 
 https://secret-shore-29644.herokuapp.com/
 
-###Main Page
+### Main Page
 ![Screenshot](http://imgur.com/Wcfy90f.png?raw=true)
 
-###Poll Creation
+### Poll Creation
 ![Screenshot](http://imgur.com/9GYRbTz.png?raw=true)
 
-###After Voting
+### After Voting
 ![Screenshot](http://imgur.com/2qGzW1Y.png?raw=true)
 
 
