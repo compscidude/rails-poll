@@ -8,7 +8,7 @@ class CreatePolls < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_foreign_key :poll, :users, column: :author_id 
+    add_foreign_key :polls, :users, column: :author_id 
 
   end
 end
