@@ -16,6 +16,9 @@ https://secret-shore-29644.herokuapp.com/
 ## Poll Creation
 ![Screenshot](http://imgur.com/9GYRbTz.png?raw=true)
 
+## Before Voting
+![Screenshot](http://imgur.com/ooIJK7q.png?raw=true)
+
 ## After Voting
 ![Screenshot](http://imgur.com/2qGzW1Y.png?raw=true)
 
