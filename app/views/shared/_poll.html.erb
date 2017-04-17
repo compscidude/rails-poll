@@ -1,0 +1,11 @@
+
+
+<div class="col-sm-6 col-sm-offset-3 top-15">
+        <% poll.poll_answers.each_with_index do |answer, idx| %>
+
+            <div class="input-group top-5">
+                <span class="input-group-addon" id="basic-addon3"> <%= idx + 1 %></span>
+                <%= link_to answer.answer, poll_participations_path(poll_id: poll.id, answer_id: answer.id), method: :post, class: 'form-control' %>
+            </div>
+        <% end %>
+</div>

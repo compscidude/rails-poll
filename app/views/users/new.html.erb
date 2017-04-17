@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+<div class="row">
+    <h3 class="text-center"> Register </h3>
+    <div class="col-sm-6 col-sm-offset-3 top-15">
+
+
+    <%= form_for @User do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name , class: 'form-control' %>
+        <%= f.submit "Submit", class: 'btn btn-default top-15' %>
+    <% end %>
+
+    </div>
+</div>

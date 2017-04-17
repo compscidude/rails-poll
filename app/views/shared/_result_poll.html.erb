@@ -1,0 +1,23 @@
+
+
+<div class="col-sm-6 col-sm-offset-3 text-center top-15">
+    <span class="alert-success padding-10 btn-block"> You have already voted </span>
+</div>
+
+<div class="col-sm-6 col-sm-offset-3 top-15">
+        <% poll.poll_answers.each_with_index do |answer, idx| %>
+            <div class="input-group top-5 col-sm-12">
+                <span class="input-group-addon" id="basic-addon3"> <%= idx + 1 %></span>
+                <% if my_vote?(poll, answer) %>
+                    <span class='form-control alert-success'> 
+                         <span class="col-sm-8 alert-success"> <%= answer.answer %> </span> <span class="col-sm-4"> <%= pluralize(answer.vote_count, 'vote') %> </span>
+                    </span>
+                <% else %>
+                    <span class='form-control'>
+                         <span class="col-sm-8"> <%= answer.answer %> </span> <span class="col-sm-4"> <%= pluralize(answer.vote_count, 'vote')  %> </span>
+                    </span>
+                <% end %>
+                </span>
+            </div>
+        <% end %>
+</div>

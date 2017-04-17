@@ -1,0 +1,21 @@
+
+
+<div class="col-sm-6 col-sm-offset-3 top-15">
+    <h1 class="bottom-10"> Poll Creation </h1>
+    <%= form_tag '/polls' do %>
+      <div class="input-group top-5">
+        <span class="input-group-addon" id="basic-addon3"> Question </span>
+        <%= text_field_tag :question, "", class: 'form-control'%> <br>
+      </div>
+
+      <% 5.times do |x| %>
+        <div class="input-group top-5">
+          <span class="input-group-addon" id="basic-addon3"> <%= x+1 %></span>
+            <%= text_field_tag :"answers[]", "", class: 'form-control'%>
+        </div>
+      <% end %>
+
+      <%= submit_tag "Submit", class: 'btn btn-default top-15'%>
+    <% end %>
+</div>
+

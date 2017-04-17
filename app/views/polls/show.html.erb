@@ -1,0 +1,13 @@
+
+
+<div class="row text-center top-15"> 
+     <h1> <%= @poll.question %> </h1>
+     <small> Started by <%= @poll.author.name %> </small>
+</div>
+
+<% if !participated?(@poll) %>
+    <%= render partial: "/shared/poll", locals: { poll: @poll } %>
+<% else %>
+     <%= render partial: "/shared/result_poll", locals: { poll: @poll } %>
+<% end %>
+

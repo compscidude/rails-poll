@@ -1,0 +1,32 @@
+
+<div class="col-sm-6 col-sm-offset-3 top-15">
+        <span class="text-center"> <%= "No Polls" if @Poll.blank? %> </span>
+        <div class="panel panel-default">
+        <div class="panel-heading text-center"> 
+            There are <b> <%= pluralize(@Poll.count, 'Polls') %> </b>   
+            <%= link_to "Create Poll", new_poll_path, class: 'btn btn-default create' %>    
+        </div>
+        <div class="panel-body">
+            <p class="text-center"> <i> You may only vote once per each poll </i> </p>
+        </div>
+
+        <table class="table">
+        <% @Poll.each_with_index do |poll,index| %>
+        <tr>
+            <td class='col-md-2'> Poll <%= index + 1 %> </td>
+            <td class-'col-md-10'> <%= link_to poll.question, poll_path(poll) %> &nbsp;
+            <span class="badge"> <%= pluralize(poll.poll_participations.count, 'Votes') %></span>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
