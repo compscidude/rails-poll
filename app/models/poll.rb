@@ -19,6 +19,7 @@ class Poll < ApplicationRecord
   end
 
   # this should be forwarded from the user
+  # Instead of just returning, we can raise an exception catch it in the controller [Future improvements]
   def cast_vote(answer)
      return unless answer.present?
      answer.vote_count = answer.vote_count + 1
