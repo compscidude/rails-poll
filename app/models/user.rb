@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
     def participate_in_poll(poll, answer)
 
-        # if the user has not participated in this poll yet
+        # if the user has already participated in this poll
         raise ActiveRecord::RecordInvalid unless PollParticipation.where(user: self, poll: poll).blank?
 
         # create a poll participation model
